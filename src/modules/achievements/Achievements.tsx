@@ -62,7 +62,7 @@ export const Achievements: React.FC<AchievementsProps> = ({ username }) => {
   const [achievements, setAchievements] = useState<Achievement[]>();
   const { authUser } = useFirebaseAuth();
   const isAuthUser = authUser?.userInfo?.username === username;
-
+  console.log('for tttesting');
   useEffect(() => {
     if (username) {
       axios('/api/Achievement', {
@@ -100,8 +100,7 @@ export const Achievements: React.FC<AchievementsProps> = ({ username }) => {
                 handleModal();
               }}
               variant="contained"
-              startIcon={<AddIcon src="/assets/icons/plus-icon.svg" />}
-            >
+              startIcon={<AddIcon src="/assets/icons/plus-icon.svg" />}>
               add new achievement
             </Button>
           </AddAchivementContiner>
@@ -110,8 +109,7 @@ export const Achievements: React.FC<AchievementsProps> = ({ username }) => {
           title="Add Achievement"
           height="90%"
           open={isModalVisible}
-          onCloseClick={handleModal}
-        >
+          onCloseClick={handleModal}>
           <AddAchievementModal handleModal={handleModal} />
         </ModalOverlay>
       </>
@@ -152,8 +150,7 @@ export const Achievements: React.FC<AchievementsProps> = ({ username }) => {
               handleModal();
             }}
             variant="contained"
-            startIcon={<AddIcon src="/assets/icons/plus-icon.svg" />}
-          >
+            startIcon={<AddIcon src="/assets/icons/plus-icon.svg" />}>
             add new achievement
           </Button>
         </AddAchivementContiner>
@@ -162,8 +159,7 @@ export const Achievements: React.FC<AchievementsProps> = ({ username }) => {
         title="Add Achievement"
         height="90%"
         open={isModalVisible}
-        onCloseClick={handleModal}
-      >
+        onCloseClick={handleModal}>
         <AddAchievementModal handleModal={handleModal} />
       </ModalOverlay>
     </>
