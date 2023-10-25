@@ -60,7 +60,7 @@ export const Achievements: React.FC<AchievementsProps> = ({ username }) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [isLoading, setLoading] = useState(true);
   const [achievements, setAchievements] = useState<Achievement[]>();
-
+  console.log('TTTesting')
   const { authUser } = useFirebaseAuth();
   const isAuthUser = authUser?.userInfo?.username === username;
 
