@@ -1,0 +1,183 @@
+.css-j7qwjs,
+.MuiCalendarPicker-root {
+  background-color: #111;
+}
+
+.css-z26msc-MuiButtonBase-root-MuiPickersDay-root:hover {
+  color: #fff !important;
+}
+
+.MuiTypography-root,
+.MuiTypography-caption,
+.css-6otkot-MuiTypography-root {
+  color: #fff !important;
+}
+
+.input-error {
+  border-color: #e63946 !important;
+}
+
+.error {
+  color: #e63946;
+  font-size: 1rem;
+  margin-top: 0.3rem;
+}
+.nav-active {
+  background-color: #fff !important;
+  border-radius: 100% !important;
+  color: #111 !important;
+}
+/*
+ * Form - CSS
+ */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: #fff !important;
+}
+input:-webkit-autofill:focus {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: rgba(27, 27, 27, 1) !important;
+}
+input::-webkit-input-placeholder {
+  font-weight: 600;
+}
+.text-dojogray-900 {
+  color: rgba(60, 60, 60, 1);
+  font-family: Saira, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+.focus\:outline-none:focus,
+.outline-none {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+.focus-within\:bg-white:focus-within {
+  background-color: rgba(255, 255, 255, 1);
+}
+.focus-within\:text-dojogray-900:focus-within {
+  color: rgba(27, 27, 27, 1);
+}
+/*
+* End - Form
+*/
+
+/*Scrolling desiging and its visibility*/
+.no-scroll-element::-webkit-scrollbar {
+  display: none;
+}
+
+.MuiOutlinedInput-root > fieldset {
+  border: 2px solid #3d3d3d !important;
+}
+
+.Mui-focused > fieldset {
+  border-color: #FFFFFF !important;
+}
+
+.MuiOutlinedInput-root > svg {
+  color: #FFFFFF !important;
+}
+
+.MuiOutlinedInput-root:hover > svg {
+  color: #FFFFFF !important;
+}
+
+.Mui-focused > svg {
+  color: #FFFFFF !important;
+}
+.MuiOutlinedInput-root > fieldset {
+  border-radius: 2px !important;
+  border: 2px solid #3d3d3d;
+}
+.MuiOutlinedInput-root > div {
+  border-radius: 2px !important;
+  color: #FFFFFF;
+}
+.Mui-focused > div {
+  color: #FFFFFF !important;
+}
+.MuiOutlinedInput-root:hover > div {
+  color: #FFFFFF !important;
+}
+
+.MuiPaper-root > ul > li:hover {
+  background-color: #3d3d3d;
+}
+
+.gm-style-cc { display:none; }
+
+body {
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+.borderdMUISelect .MuiOutlinedInput-root > fieldset {
+    border-radius: 5px !important;
+}
+
+.errorBorderdMUISelect .MuiOutlinedInput-root > fieldset {
+    border-radius: 5px !important;
+    border: 2.5px solid #d32f2f !important ; 
+}
+
+.MuiAutocomplete-listbox {
+  background-color: #000000 !important;
+}
+
+.MuiFilledInput-root::after {
+  border-bottom: none !important;
+}
+
+.MuiFilledInput-root::before {
+  border-bottom: none !important;
+}
+
+.MuiFormHelperText-root{
+  background-color: #282828 !important;
+  padding-left: 16px !important;
+  color: #828282 !important;
+  margin-top: 0px !important;
+  margin-inline: 0px !important;
+  padding-top: 3px;
+  font-family: 'Saira';
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 24px;
+}
+
+.PhoneInputInput{
+  padding: 25px  16px 8px 16px;
+  background-color: #1B1B1B;
+  border: 0px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  font-family: Saira;
+  font-style: normal !important;
+  font-weight: 200 !important;
+  font-size: 16px;
+  color:#fff !important
+}
+
+.PhoneInputInput:focus-visible{
+  outline: none !important;
+}
+
+
+.PhoneInput--focus .PhoneInputInput{
+    background-color: #fff !important;
+    color: #000000 !important;
+    font-weight: 400 !important;
+    outline: none;
+}
+
+
+.PhoneInputCountry{
+  padding-right: 16px !important;
+  padding-left: 16px !important;
+  margin-right: 0px !important;
+  background-color: #282828;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}

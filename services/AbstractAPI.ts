@@ -1,0 +1,1 @@
+export const TIMEZONE_API_KEY = '4539a6b6aa56486a96757557fa5ae447';

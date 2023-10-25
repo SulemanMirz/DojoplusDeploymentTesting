@@ -1,0 +1,105 @@
+import React from 'react';
+import { GetServerSideProps, NextPage } from 'next';
+
+import styled from 'styled-components';
+import { Section } from '../../../shared/components/layout/Section';
+import { MainProfile } from '../../../shared/components/layout/Main';
+import { Container } from '../../../shared/components/layout/Container';
+
+import { SchoolList } from '../../../modules/school-list/SchoolList';
+import http from '../../../../services/http';
+import Custom404 from '../../404';
+
+type SchoolListType = {
+  schoolData: [{ schoolName: string; slug: string }];
+  notFound?: boolean;
+};
+
+const Container404 = styled.div`
+  display: flex;
+  align-self: center;
+  height: 100%;
+`;
+
+const SchoolListView: NextPage<SchoolListType> = ({ schoolData, notFound }) => (
+  <Section>
+    <MainProfile>
+      <Container notGutters isFlexGrow>
+        {notFound ? (
+          <Container404>
+            <Custom404 msg="No Data Found" />
+          </Container404>
+        ) : (
+          <SchoolList schoolData={schoolData} />
+        )}
+      </Container>
+    </MainProfile>
+  </Section>
+);
+
+export default SchoolListView;
+
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+export const getServerSideProps: GetServerSideProps<SchoolListType> = async (
+  context,
+) => {
+  const query = context.query.slug;
+  const queryParams = {
+    ...(query[0] && {
+      martialArts: query[0],
+    }),
+    ...(query[1] && {
+      country: query[1],
+    }),
+    ...(query[2] && {
+      state: query[2],
+    }),
+    ...(query[3] && {
+      city: query[3],
+    }),
+    ...(query[4] && {
+      neighbourhood: query[4],
+    }),
+  };
+
+  try {
+    const baseUrl = `${
+      process.env.NODE_ENV === 'development' ? 'http' : 'https'
+    }://${context.req.headers.host}/api/`;
+    const requests = [];
+    let schoolData = [];
+
+    requests.push(
+      http.get(`${baseUrl}Schools/list`, {
+        params: queryParams,
+      }),
+    );
+
+    await Promise.all(requests).then((res) => {
+      schoolData = [...res[0].data];
+    });
+
+    if (schoolData.length === 0) {
+      return {
+        props: {
+          notFound: true,
+          schoolData: [],
+        },
+      };
+    }
+    return {
+      props: {
+        notFound: false,
+        schoolData,
+      },
+    };
+  } catch (error) {
+    console.log(JSON.stringify(error, null, 2));
+    return {
+      props: {},
+      notFound: true,
+      fallback: 'blocking',
+    };
+  }
+};

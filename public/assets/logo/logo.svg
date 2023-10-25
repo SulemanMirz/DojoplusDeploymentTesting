@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="57" height="27">
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#FFFFFE" d="M11.696 23.303L9.076 26H4.069v-2.697h5.008V16.71h-6.34V26H.119V14h11.578v9.303zm42.018-6.364v2.247h2.168v1.873l-2.17-.001.001 2.248h-1.806v-2.248h-2.169v-1.871l2.168-.001v-2.247h1.808zM26.346 26h4.962v-2.694h-4.962zm6.38 0V14h2.599v9.303L32.725 26m6.888 0h-2.634V14h11.578v12h-7.628v-2.697h4.995V16.71h-6.312V26zm-23.865 0h-2.634V14h11.578v12h-7.628v-2.697h4.995V16.71h-6.312V26z" />
+            <text fill="#FFF" font-family="Saira, Helvetica Neue, sans-serif" font-size="9" font-weight="500" opacity="0.296">
+                <tspan x="0" y="10">powered by</tspan>
+            </text>
+    </g>
+</svg>

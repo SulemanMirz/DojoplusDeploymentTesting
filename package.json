@@ -1,0 +1,141 @@
+{
+  "name": "react-starter",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@auth0/auth0-react": "^1.4.0",
+    "@auth0/nextjs-auth0": "^1.3.0",
+    "@cobuildlab/react-simple-state": "^0.6.2",
+    "@emotion/cache": "^11.4.0",
+    "@emotion/react": "^11.4.1",
+    "@emotion/server": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
+    "@hookform/resolvers": "^2.9.1",
+    "@mui/icons-material": "^5.0.3",
+    "@mui/lab": "^5.0.0-alpha.50",
+    "@mui/material": "^5.0.3",
+    "@mui/x-date-pickers": "^5.0.8",
+    "@reduxjs/toolkit": "^1.8.5",
+    "@stripe/react-stripe-js": "^1.7.2",
+    "@stripe/stripe-js": "^1.29.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/googlemaps": "^3.43.3",
+    "@types/jest": "^26.0.15",
+    "@types/react-dom": "^17.0.0",
+    "airtable": "^0.11.2",
+    "axios": "^0.26.1",
+    "babel-plugin-inline-react-svg": "^2.0.1",
+    "d": "^1.0.1",
+    "date-fns": "^2.25.0",
+    "dayjs": "^1.10.7",
+    "downloadjs": "^1.4.7",
+    "eslint-config-airbnb-typescript": "^12.3.1",
+    "eslint-config-airbnb-typescript-prettier": "^4.2.0",
+    "firebase": "^9.7.0",
+    "html-to-image": "^1.11.11",
+    "i18next": "^21.6.5",
+    "jest": "^26.6.0",
+    "lodash": "^4.17.21",
+    "moize": "^6.1.4",
+    "next": "^10.1.3",
+    "nextjs-progressbar": "^0.0.13",
+    "ni18n": "^1.0.3",
+    "react": "^17.0.2",
+    "react-csv-reader": "^3.4.0",
+    "react-dom": "^17.0.2",
+    "react-firebase-hooks": "^5.1.0",
+    "react-hook-form": "^7.17.4",
+    "react-i18next": "^11.15.3",
+    "react-infinite-scroll-component": "^6.1.0",
+    "react-phone-number-input": "^3.2.17",
+    "react-player": "^2.11.0",
+    "react-redux": "^8.0.4",
+    "react-scripts": "4.0.3",
+    "react-share": "^4.4.1",
+    "react-use-window-scroll": "^1.0.13",
+    "react-virtualized-auto-sizer": "^1.0.6",
+    "react-window": "^1.8.6",
+    "recharts": "^2.0.4",
+    "request-ip": "^3.3.0",
+    "stripe": "^8.219.0",
+    "styled-components": "^5.3.1",
+    "type-fest": "^2.5.1",
+    "web-vitals": "^1.0.1",
+    "yup": "^0.32.11"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "test": "jest",
+    "prepare": "npx husky install",
+    "eslint": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "postbuild": "next-sitemap"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npx lint-staged",
+      "pre-push:": "npm test"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/(build|docs|node_modules)/"
+    ],
+    "testRegex": [
+      ".test.ts$",
+      ".test.tsx$"
+    ]
+  },
+  "devDependencies": {
+    "@types/google.maps": "^3.46.0",
+    "@types/node": "18.17.0",
+    "@types/react": "^18.0.1",
+    "@types/react-virtualized-auto-sizer": "^1.0.1",
+    "@types/react-window": "^1.8.5",
+    "@types/styled-components": "^5.1.15",
+    "babel-plugin-styled-components": "^1.13.2",
+    "eslint-plugin-cypress": "^2.11.2",
+    "eslint-plugin-jsdoc": "^32.3.0",
+    "eslint-plugin-react": "^7.23.2",
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4",
+    "next-sitemap": "^1.6.18",
+    "prettier": "^2.4.1",
+    "typescript": "^4.2.4"
+  }
+}

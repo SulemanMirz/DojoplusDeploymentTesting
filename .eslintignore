@@ -1,0 +1,8 @@
+#React
+node_modules
+build
+public
+template
+pages/index.tsx
+*-test.*
+src/shared/types/generated.ts
