@@ -1,6 +1,5 @@
-import { Container } from 'next/app';
-import Head from 'next/head';
 import React from 'react';
+import Head from 'next/head';
 import { ActiviyDetails } from '../../../modules/activity';
 
 const Activity: React.FC = () => {
@@ -9,9 +8,9 @@ const Activity: React.FC = () => {
       <Head>
         <title>Activity</title>
       </Head>
-      <Container>
+      <div>
         <ActiviyDetails />
-      </Container>
+      </div>
     </>
   );
 };
